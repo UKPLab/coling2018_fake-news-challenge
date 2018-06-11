@@ -35,15 +35,23 @@ A Retrospective Analysis of the Fake News Challenge Stance Detection Task (Link 
         
         conda env create -f anaconda_env_FNC_challenge.yml
         
+    (Note: If you use a higher CUDA version, you might have to use a newer version of tensorflow.)
+        
 2. Parts of the Natural Language Toolkit (NLTK) might need to be installed manually.
 
 		python3.4 -c "import nltk; nltk.download('stopwords'); nltk.download('punkt'); nltk.download('wordnet'); nltk.download('cmudict');"
 	      
-3. Copy Word2Vec [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit) in folder athene_system/data/embeddings/google_news/ 
+3. Copy Word2Vec [GoogleNews-vectors-negative300.bin.gz](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit) in folder 
+
+        [project_name]/data/embeddings/google_news/ 
+        
+    (folders have to be created)
 
 4. Download [Paraphrase Database: Lexical XL Paraphrases 1.0](http://www.cis.upenn.edu/~ccb/ppdb/release-1.0/ppdb-1.0-xl-lexical.gz) and extract it to the ppdb folder.
 	
-		gunzip ppdb-1.0-xl-lexical.gz athene_system/data/ppdb/
+		gunzip ppdb-1.0-xl-lexical.gz [project_name]/data/ppdb/
+		
+    (folders have to be created)
         
 5. To use the Stanford-parser an instance has to be started in parallel: Download [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/index.html), extract anywhere and execute following command: 
 
@@ -87,7 +95,7 @@ For more details
         * crossv: runs 10-fold cross validation on train / validation set and prints the results
         * holdout: trains classifier on train and validation set, tests it on holdout set and prints the results
         * ftrain: trains classifier on train/validation/holdout set and saves it to fnc/data/fnc-1/mlp_models/
-        * ftest: predicts stances of unlabeled test set based on the model (see Installation, step 2) 
+        * ftest: predicts stances of unlabeled test set based on the model
 
 ## System description
 

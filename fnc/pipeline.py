@@ -1,52 +1,51 @@
-import sys
-import datetime
-import argparse
-import os
-import csv
-import numpy as np
-import os.path as path
+import sys, os.path as path
 from builtins import isinstance
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-import fnc.refs.fnc1.scorer as scorer
-import fnc.utils.score_calculation as score_calculation
-import fnc.utils.estimator_definitions as esitmator_definitions
-from fnc.refs.utils.score import LABELS, score_submission
-from fnc.settings import myConstants
-from fnc.utils import printout_manager
 from fnc.models.MultiThreadingFeedForwardMLP import MultiThreadingFeedForwardMLP
+import datetime
+from fnc.utils import printout_manager
 from fnc.src.models import Model
+import fnc.utils.estimator_definitions as esitmator_definitions
+import argparse
+import os.path as path
+import os
+import fnc.utils.score_calculation as score_calculation
+import numpy as np
 from fnc.refs.utils.generate_test_splits import kfold_split, get_stances_for_folds
-#FNC challenge features from Athene
-from fnc.refs.feature_engineering import NMF_fit_all_incl_holdout_and_test, \
-                latent_dirichlet_allocation_incl_holdout_and_test, latent_semantic_indexing_gensim_holdout_and_test,\
-                NMF_fit_all_concat_300_and_test, word_ngrams_concat_tf5000_l2_w_holdout_and_test, NMF_fit_all, \
-    latent_dirichlet_allocation, latent_semantic_indexing_gensim_test, NMF_fit_all_concat_300, word_ngrams_concat_tf5000_l2_w_holdout
-#FNC challenge features from baseline implementation and from Benjamin Schiller
-from fnc.refs.feature_engineering import refuting_features, polarity_features, hand_features, word_overlap_features, \
-    gen_non_bleeding_feats, gen_or_load_feats, \
-    word_unigrams_5000_concat_tf_l2_holdout_unlbled_test, NMF_cos_300_holdout_unlbled_test, \
+from fnc.refs.feature_engineering import refuting_features, polarity_features, hand_features, word_overlap_features
+from fnc.refs.feature_engineering import gen_non_bleeding_feats, gen_or_load_feats
+from fnc.refs.feature_engineering import word_unigrams_5000_concat_tf_l2_holdout_unlbled_test, NMF_cos_300_holdout_unlbled_test, \
     NMF_concat_300_holdout_unlbled_test, latent_dirichlet_allocation_25_holdout_unlbled_test, \
     latent_semantic_indexing_gensim_300_concat_holdout_unlbled_test, \
     NMF_cos_50, latent_dirichlet_allocation_25, \
-    latent_semantic_indexing_gensim_300_concat_holdout, NMF_concat_300_holdout, word_unigrams_5000_concat_tf_l2_holdout, \
-    sen2sen_similarity_max, word_mover_distance_similarity_sentence_min, \
+    latent_semantic_indexing_gensim_300_concat_holdout, NMF_concat_300_holdout, word_unigrams_5000_concat_tf_l2_holdout
+from fnc.refs.feature_engineering_challenge import NMF_fit_all_incl_holdout_and_test, \
+                latent_dirichlet_allocation_incl_holdout_and_test, latent_semantic_indexing_gensim_holdout_and_test,\
+                NMF_fit_all_concat_300_and_test, word_ngrams_concat_tf5000_l2_w_holdout_and_test, NMF_fit_all, \
+    latent_dirichlet_allocation, latent_semantic_indexing_gensim_test, NMF_fit_all_concat_300, word_ngrams_concat_tf5000_l2_w_holdout
+#copied from old implementation
+from fnc.refs.feature_engineering import sen2sen_similarity_max, word_mover_distance_similarity_sentence_min, \
     word_mover_distance_wholebody, stanford_ppdb_score, stanford_ppdb_score_1sent, stanford_ppdb_score_2sent, stanford_ppdb_score_3sent, \
     stanford_sentiment, stanford_sentiment_1sent, stanford_sentiment_2sent, stanford_sentiment_3sent, \
     stanford_negation_features, stanford_negation_features_1sent, stanford_negation_features_2sent, stanford_negation_features_3sent, \
     stanford_based_verb_noun_sim, stanford_based_verb_noun_sim_1sent, stanford_based_verb_noun_sim_2sent, stanford_based_verb_noun_sim_3sent, \
     sdm_sim, stanford_avg_words_per_sent, stanford_avg_words_per_sent_1sent, stanford_avg_words_per_sent_2sent, stanford_avg_words_per_sent_3sent, \
-    hedging_features, ppdb, discuss_features, single_flat_LSTM_50d_100, latent_dirichlet_allocation_300, NMF_cos_300, \
-    char_3grams_5000_concat_all_data, \
+    hedging_features, ppdb, discuss_features, single_flat_LSTM_50d_100, latent_dirichlet_allocation_300, NMF_cos_300
+from fnc.refs.feature_engineering_benjamin import char_3grams_5000_concat_all_data, \
     lexical_features,max_diff_twitter_uni_bigrams,mpqa_unigrams, negated_context_word_12grams_concat_tf5000_l2_all_data, \
     nrc_emo_lex,nrc_hashtag_sentiment_unigram, nrc_hashtag_sentiment_unigram_POS, POS_features, readability_features , \
     sentiment140_unigrams, structural_features
+from fnc.refs.utils.score import LABELS, score_submission
+import csv
+import fnc.refs.fnc1.scorer as scorer
+from fnc.settings import myConstants
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
 def get_args():
     ''' This function parses and return arguments passed in'''
     parser = argparse.ArgumentParser(description='Scorer pipeline')
-    parser.add_argument('-p', '--pipeline_type', type=str, nargs='+', help='Pipeline Type (crossv,holdout,ftrain,ftest), e.g. -p ftrain', required=True)
+    parser.add_argument('-p', '--pipeline_type', type=str, nargs='+', help='Pipeline Type (crossv,holdout,ftrain,ftest), e.g. -p crossv holdout', required=True)
     parser.add_argument('-s', '--scorer_type', type=str, help='Scorer Type (baselines, CNN, tf_idf, avg_embed, sdm, doc2vec, word_mover_sentence, word_mover_wholeText)', required=False)
     parser.add_argument('-t', '--threshold', type=float, help='Threshold', required=False)
 
@@ -234,6 +233,7 @@ def generate_features_test(stances, dataset, name, feature_list, features_dir):
         headId.append(name+str(stanceCounter))
         stanceCounter += 1
 
+
     X_feat = []
     for feature in feature_list:
         print("calculate feature: " + str(feature))
@@ -255,6 +255,9 @@ def generate_non_bleeding_features(fold_stances, hold_out_stances, no_folds, BOW
     This method (and feature methods based on this one) is just to get more reliable (non-bleeding) score results and cannot be used for
     the training of the final classifier.
     """
+
+    #data_path = "%s/data/fnc-1" % (path.dirname(path.dirname(path.abspath(__file__))))
+    #d = DataSet(data_path)
 
     # holds all bag of words features and their feature extraction methods
     non_bleeding_feature_dict = {}
@@ -414,9 +417,10 @@ def cross_validation(fold_stances, folds, Xs, ys, non_bleeding_features, feature
         # predict the labes for fitted classifier with the test data
         predicted_int = clf.predict(X_test)
 
-        #Baseline "hack" - uncomment to calculate the baseline
-        #predicted_int = np.empty(len(y_test))
-        #predicted_int.fill(3)
+        #Baseline "hack"
+        # ToDO: Remove after baseline test
+        predicted_int = np.empty(len(y_test))
+        predicted_int.fill(3)
 
         predicted = [LABELS[int(a)] for a in predicted_int]
         actual = [LABELS[int(a)] for a in y_test]
@@ -465,6 +469,7 @@ def cross_validation(fold_stances, folds, Xs, ys, non_bleeding_features, feature
 def append_to_loss_monitor_file(text, filepath):
     with open(filepath, 'a+') as the_file:
         the_file.write(text+"\n")
+
 
 def validate_holdout(Xs, ys, X_holdout, y_holdout, non_bleeding_features, features_dir,
                      scorer_type, feat_indices, result_string, learning_rate_string, features):
@@ -629,8 +634,9 @@ def final_clf_training(Xs, ys, X_holdout, y_holdout, scorer_type, sanity_check=F
         import datetime
         start = datetime.datetime.now().time()
         print("Started oversampling/undersampling at: " + str(start))
-        # uncomment following lines for the different sampling methods #####
+        ######
         # Oversampling
+
         from imblearn.over_sampling import SMOTE, ADASYN, RandomOverSampler
         print("Oversampling data")
         #kind = ['regular', 'borderline1', 'borderline2', 'svm']
@@ -877,6 +883,17 @@ def pipeline():
         Xs = dict()
         ys = dict()
 
+        # (scorer_type, [normal features], [non-bleeding features])
+        feature_list = [
+            # ORIGINAL FEATURES OF FNC-1 BEST SUBMISSION 3)
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_1sent'],
+             [])
+        ]
+
         feature_list = myConstants.feature_list
 
         for scorer_type, features, non_bleeding_features in feature_list:
@@ -948,6 +965,8 @@ def pipeline():
 
                 print(fnc_results)
                 printout_manager.save_file(fnc_results, result_file_folder + "/fnc_results.txt", "a+")
+                #scorer.print_confusion_matrix(cm)
+                #print(scorer.SCORE_REPORT.format(max_score, null_score, test_score))
 
             # save file with results to disk
             printout_manager.save_file(result_string, result_file_folder + "/result_file_temp.txt", "a+")

@@ -1,0 +1,4 @@
+Produced by Percy Liang through implementation of brown word clustering:
+https://github.com/percyliang/brown-cluster
+Downloaded from:
+http://www.cs.cmu.edu/~ark/TweetNLP/

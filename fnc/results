@@ -1,0 +1,1597 @@
+Result:
+
+Baseline:
+feature_list = [
+            # ORIGINAL FEATURES OF FNC-1 BEST SUBMISSION 3)
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_1sent'],
+             [])
+        ]
+
+Model:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_0/"
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission_baseline.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    883    |    21     |    846    |    153    |
+-------------------------------------------------------------
+| disagree  |    231    |    45     |    267    |    154    |
+-------------------------------------------------------------
+|  discuss  |    501    |    26     |   3595    |    342    |
+-------------------------------------------------------------
+| unrelated |    25     |     0     |    131    |   18193   |
+-------------------------------------------------------------
+ACCURACY: 0.894
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9544.25  ||
+
+
+
+--------------------
+Baseline without stanford wordsim1sent
+feature_list = [
+            # ORIGINAL FEATURES OF FNC-1 BEST SUBMISSION 3)
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              ],
+             [])
+        ]
+
+Model:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_1/"
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission1.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    870    |    28     |    821    |    184    |
+-------------------------------------------------------------
+| disagree  |    208    |    58     |    260    |    171    |
+-------------------------------------------------------------
+|  discuss  |    512    |    35     |   3543    |    374    |
+-------------------------------------------------------------
+| unrelated |    16     |     2     |    128    |   18203   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9487.75  ||
+
+
+----------------------
+feature_list = [
+            # ORIGINAL FEATURES OF FNC-1 BEST SUBMISSION without stanford_wodsim_1sent + stanford_ppdb
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb'],
+             [])
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_2/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission2.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    911    |    12     |    850    |    130    |
+-------------------------------------------------------------
+| disagree  |    221    |    38     |    311    |    127    |
+-------------------------------------------------------------
+|  discuss  |    521    |    30     |   3633    |    280    |
+-------------------------------------------------------------
+| unrelated |    10     |     0     |    121    |   18218   |
+-------------------------------------------------------------
+ACCURACY: 0.897
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9622.75  ||
+
+--------------------
+
+Baseline:
+feature_list = [
+            # 3
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_wordsim_1sent'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_3/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission3.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    900    |    17     |    864    |    122    |
+-------------------------------------------------------------
+| disagree  |    212    |    41     |    326    |    118    |
+-------------------------------------------------------------
+|  discuss  |    519    |    34     |   3634    |    277    |
+-------------------------------------------------------------
+| unrelated |    10     |     1     |    132    |   18206   |
+-------------------------------------------------------------
+ACCURACY: 0.896
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9619.5   ||
+
+------------------------------------
+
+Baseline:
+feature_list = [
+            # 5
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_5/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission5.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    837    |    26     |    879    |    161    |
+-------------------------------------------------------------
+| disagree  |    213    |    36     |    298    |    150    |
+-------------------------------------------------------------
+|  discuss  |    434    |    30     |   3678    |    322    |
+-------------------------------------------------------------
+| unrelated |    27     |     1     |    131    |   18190   |
+-------------------------------------------------------------
+ACCURACY: 0.895
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9568.5   ||
+
+--------------------------------------
+
+Features:
+feature_list = [
+            # 6
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim','ppdb','stanford_ppdb', 'stanford_ppdb_1sent','stanford_ppdb_2sent',
+              'stanford_ppdb_3sent','stanford_sentiment','stanford_sentiment_1sent','stanford_sentiment_2sent',
+              'stanford_sentiment_3sent','stanford_wordsim','stanford_wordsim_1sent','stanford_wordsim_2sent',
+              'stanford_wordsim_3sent','stanford_negation','stanford_negation_1sent','stanford_negation_2sent',
+              'stanford_negation_3sent','stanford_avg_words_per_sent','stanford_avg_words_per_sent_1sent',
+              'stanford_avg_words_per_sent_2sent','stanford_avg_words_per_sent_3sent','hedging','sen2sen',
+              'wmdsenSen','wmdsenDoc','sdm_sim'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_6/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission6.csv"
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    853    |    15     |    939    |    96     |
+-------------------------------------------------------------
+| disagree  |    209    |    44     |    338    |    106    |
+-------------------------------------------------------------
+|  discuss  |    504    |    26     |   3708    |    226    |
+-------------------------------------------------------------
+| unrelated |    15     |     1     |    164    |   18169   |
+-------------------------------------------------------------
+ACCURACY: 0.896
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9655.0   ||
+
+
+----------------------------
+Features:
+ feature_list = [
+            # 6 All stanford features with whole body
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim','stanford_ppdb', 'stanford_sentiment','stanford_wordsim','stanford_negation','stanford_avg_words_per_sent','hedging'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_7/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission7.csv
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    935    |     7     |    855    |    106    |
+-------------------------------------------------------------
+| disagree  |    218    |    41     |    331    |    107    |
+-------------------------------------------------------------
+|  discuss  |    535    |    19     |   3666    |    244    |
+-------------------------------------------------------------
+| unrelated |    17     |     3     |    148    |   18181   |
+-------------------------------------------------------------
+ACCURACY: 0.898
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9678.5   ||
+
+
+-----------
+Features:
+feature_list = [
+            # 8 All stanford features with first sentence
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_1sent','stanford_ppdb_1sent', 'stanford_sentiment_1sent','stanford_negation_1sent','stanford_avg_words_per_sent_1sent','hedging'],
+             [])
+        ]
+
+Model
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_8/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission8.csv
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    847    |    23     |    903    |    130    |
+-------------------------------------------------------------
+| disagree  |    227    |    35     |    291    |    144    |
+-------------------------------------------------------------
+|  discuss  |    522    |    29     |   3614    |    299    |
+-------------------------------------------------------------
+| unrelated |    26     |     3     |    148    |   18172   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9537.75  ||
+
+
+
+-------------
+Features:
+feature_list = [
+            # 9 All stanford features with first 2 sentence
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_2sent','stanford_ppdb_2sent', 'stanford_sentiment_2sent','stanford_negation_2sent','stanford_avg_words_per_sent_2sent','hedging'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_9/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission9.csv
+
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    921    |    10     |    842    |    130    |
+-------------------------------------------------------------
+| disagree  |    236    |    43     |    284    |    134    |
+-------------------------------------------------------------
+|  discuss  |    548    |    27     |   3622    |    267    |
+-------------------------------------------------------------
+| unrelated |    10     |     1     |    152    |   18186   |
+-------------------------------------------------------------
+ACCURACY: 0.896
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9619.25  ||
+
+
+-----------
+Features:
+        feature_list = [
+            # 10 All stanford features with first 3 sentence
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_3sent','stanford_ppdb_3sent', 'stanford_sentiment_3sent','stanford_negation_3sent','stanford_avg_words_per_sent_3sent','hedging'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_10/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission10.csv
+
+Results:
+
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    910    |    14     |    860    |    119    |
+-------------------------------------------------------------
+| disagree  |    218    |    47     |    308    |    124    |
+-------------------------------------------------------------
+|  discuss  |    536    |    18     |   3650    |    260    |
+-------------------------------------------------------------
+| unrelated |    14     |     1     |    148    |   18186   |
+-------------------------------------------------------------
+ACCURACY: 0.897
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9642.0   ||
+
+--------------------
+
+features
+        feature_list = [
+            # 11 All stanford features with whole body
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand',
+              'stanford_ppdb', 'stanford_sentiment','stanford_wordsim','stanford_negation','stanford_avg_words_per_sent','hedging'],
+             [])
+        ]
+
+
+
+Model
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_11/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission11.csv
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    514    |    50     |   1172    |    167    |
+-------------------------------------------------------------
+| disagree  |    131    |    27     |    382    |    157    |
+-------------------------------------------------------------
+|  discuss  |    899    |    77     |   3096    |    392    |
+-------------------------------------------------------------
+| unrelated |    73     |    13     |    308    |   17955   |
+-------------------------------------------------------------
+ACCURACY: 0.850
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  8803.5   ||
+
+
+---------------
+
+
+        feature_list = [
+            # 12
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb'],
+             [])
+        ]
+
+Model:
+Model path: /home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_12/
+
+Results:
+"/home/local/UKP/caspelherr/fakenews2/data/fnc-1/fnc_results/submission12.csv
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    901    |    24     |    817    |    161    |
+-------------------------------------------------------------
+| disagree  |    239    |    44     |    255    |    159    |
+-------------------------------------------------------------
+|  discuss  |    550    |    35     |   3560    |    319    |
+-------------------------------------------------------------
+| unrelated |    31     |     4     |    139    |   18175   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9528.75  ||
+
+
+
+----------
+Features
+
+        feature_list = [
+            # 13
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_negation'],
+             [])
+        ]
+
+Model:
+Model path: /home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_13/
+
+Results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    844    |    20     |    864    |    175    |
+-------------------------------------------------------------
+| disagree  |    186    |    53     |    284    |    174    |
+-------------------------------------------------------------
+|  discuss  |    428    |    31     |   3647    |    358    |
+-------------------------------------------------------------
+| unrelated |    23     |     2     |    142    |   18182   |
+-------------------------------------------------------------
+ACCURACY: 0.894
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9542.75  ||
+
+
+--------------------------
+Featues:
+        feature_list = [
+            # 14
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_avg_words_per_sent'],
+             [])
+        ]
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_14/
+
+Results:
+
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    860    |    30     |    854    |    159    |
+-------------------------------------------------------------
+| disagree  |    214    |    46     |    283    |    154    |
+-------------------------------------------------------------
+|  discuss  |    451    |    38     |   3654    |    321    |
+-------------------------------------------------------------
+| unrelated |    30     |     3     |    180    |   18136   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9561.5   ||
+
+
+--------------
+
+Features:
+feature_list = [
+            # 15
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'hedging'],
+             [])
+        ]
+
+
+Model:
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_15/
+
+Result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    922    |    19     |    791    |    171    |
+-------------------------------------------------------------
+| disagree  |    234    |    44     |    256    |    163    |
+-------------------------------------------------------------
+|  discuss  |    523    |    43     |   3564    |    334    |
+-------------------------------------------------------------
+| unrelated |    29     |     3     |    167    |   18150   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9534.0   ||
+
+-----------------------------------------------------------
+features:
+
+
+
+
+Model:
+16
+
+Result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    882    |    15     |    848    |    158    |
+-------------------------------------------------------------
+| disagree  |    231    |    29     |    280    |    157    |
+-------------------------------------------------------------
+|  discuss  |    527    |    34     |   3556    |    347    |
+-------------------------------------------------------------
+| unrelated |    16     |     0     |    117    |   18216   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9504.75  ||
+
+
+---------------
+        feature_list = [
+            # 16
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb_1sent'],
+             [])
+        ]
+
+model
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_17/
+
+result
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    906    |    15     |    836    |    146    |
+-------------------------------------------------------------
+| disagree  |    241    |    28     |    287    |    141    |
+-------------------------------------------------------------
+|  discuss  |    525    |    21     |   3598    |    320    |
+-------------------------------------------------------------
+| unrelated |    15     |     0     |    115    |   18219   |
+-------------------------------------------------------------
+ACCURACY: 0.895
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9568.0   ||
+
+
+-------------
+
+Features
+        feature_list = [
+            # 18
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb_3sent'],
+             [])
+        ]
+
+Model
+/home/local/UKP/caspelherr/fakenews2/data/fnc-1/mlp_models/voting_mlps_hard_final_new_18/
+
+result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    928    |    13     |    817    |    145    |
+-------------------------------------------------------------
+| disagree  |    229    |    29     |    294    |    145    |
+-------------------------------------------------------------
+|  discuss  |    523    |    17     |   3607    |    317    |
+-------------------------------------------------------------
+| unrelated |    13     |     0     |    100    |   18236   |
+-------------------------------------------------------------
+ACCURACY: 0.897
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9596.25  ||
+
+
+---------------
+
+features
+
+        feature_list = [
+            # 19
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_sentiment_1sent'],
+             [])
+        ]
+
+Model
+19
+
+Results
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    865    |    31     |    839    |    168    |
+-------------------------------------------------------------
+| disagree  |    224    |    42     |    274    |    157    |
+-------------------------------------------------------------
+|  discuss  |    482    |    42     |   3606    |    334    |
+-------------------------------------------------------------
+| unrelated |    24     |     3     |    153    |   18169   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9528.25  ||
+
+
+---------
+
+features:
+
+        feature_list = [
+            # 20
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_sentiment_2sent'],
+             [])
+        ]
+
+
+Model
+20
+
+Result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    860    |    30     |    826    |    187    |
+-------------------------------------------------------------
+| disagree  |    210    |    59     |    250    |    178    |
+-------------------------------------------------------------
+|  discuss  |    499    |    52     |   3555    |    358    |
+-------------------------------------------------------------
+| unrelated |    21     |     3     |    132    |   18193   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9489.0   ||
+
+
+------------
+
+features
+
+        feature_list = [
+            # 21
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_sentiment_3sent'],
+             [])
+        ]
+
+model:
+21
+
+Results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    868    |    29     |    833    |    173    |
+-------------------------------------------------------------
+| disagree  |    223    |    47     |    263    |    164    |
+-------------------------------------------------------------
+|  discuss  |    479    |    42     |   3605    |    338    |
+-------------------------------------------------------------
+| unrelated |    24     |     1     |    145    |   18179   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9532.0   ||
+
+-------------
+
+
+features:
+feature_list = [
+            # 22
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_2sent'],
+             [])
+        ]
+
+
+model:
+22
+
+result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    852    |    16     |    872    |    163    |
+-------------------------------------------------------------
+| disagree  |    204    |    45     |    296    |    152    |
+-------------------------------------------------------------
+|  discuss  |    452    |    35     |   3652    |    325    |
+-------------------------------------------------------------
+| unrelated |    25     |     1     |    146    |   18177   |
+-------------------------------------------------------------
+ACCURACY: 0.894
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9562.0   ||
+
+
+---------------
+Features:
+        feature_list = [
+            # 23
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_wordsim_3sent'],
+             [])
+        ]
+
+Model:
+23
+
+Results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    831    |    25     |    884    |    163    |
+-------------------------------------------------------------
+| disagree  |    201    |    50     |    298    |    148    |
+-------------------------------------------------------------
+|  discuss  |    439    |    31     |   3674    |    320    |
+-------------------------------------------------------------
+| unrelated |    25     |     1     |    148    |   18175   |
+-------------------------------------------------------------
+ACCURACY: 0.894
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9568.25  ||
+
+-------------
+Features:
+        feature_list = [
+            # 24
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_negation_1sent'],
+             [])
+        ]
+
+
+Model:
+24
+
+Results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    844    |    22     |    868    |    169    |
+-------------------------------------------------------------
+| disagree  |    192    |    56     |    282    |    167    |
+-------------------------------------------------------------
+|  discuss  |    476    |    34     |   3611    |    343    |
+-------------------------------------------------------------
+| unrelated |    21     |     1     |    152    |   18175   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9523.25  ||
+
+
+--------------
+features:
+
+        feature_list = [
+            # 25
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_negation_2sent'],
+             [])
+        ]
+
+
+model:
+25
+
+Result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    851    |    12     |    861    |    179    |
+-------------------------------------------------------------
+| disagree  |    207    |    45     |    272    |    173    |
+-------------------------------------------------------------
+|  discuss  |    475    |    20     |   3621    |    348    |
+-------------------------------------------------------------
+| unrelated |    24     |     2     |    156    |   18167   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9520.5   ||
+
+
+--------------
+feature
+        feature_list = [
+            # 26
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_negation_3sent'],
+             [])
+        ]
+
+
+model 26
+
+
+Result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    864    |    16     |    847    |    176    |
+-------------------------------------------------------------
+| disagree  |    193    |    41     |    291    |    172    |
+-------------------------------------------------------------
+|  discuss  |    451    |    29     |   3640    |    344    |
+-------------------------------------------------------------
+| unrelated |    20     |     2     |    159    |   18168   |
+-------------------------------------------------------------
+ACCURACY: 0.894
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9543.75  ||
+
+--------
+
+features:
+
+        feature_list = [
+            # 27
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_avg_words_per_sent_1sent'],
+             [])
+        ]
+
+
+model:
+27
+
+results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    854    |    21     |    870    |    158    |
+-------------------------------------------------------------
+| disagree  |    202    |    46     |    295    |    154    |
+-------------------------------------------------------------
+|  discuss  |    469    |    29     |   3643    |    323    |
+-------------------------------------------------------------
+| unrelated |    23     |     3     |    171    |   18152   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9552.5   ||
+
+
+
+--------
+
+features
+
+        feature_list = [
+            # 28
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_avg_words_per_sent_2sent'],
+             [])
+        ]
+ model
+ 28
+
+ result:
+ CONFUSION MATRIX:
+ -------------------------------------------------------------
+ |           |   agree   | disagree  |  discuss  | unrelated |
+ -------------------------------------------------------------
+ |   agree   |    877    |    20     |    839    |    167    |
+ -------------------------------------------------------------
+ | disagree  |    223    |    39     |    269    |    166    |
+ -------------------------------------------------------------
+ |  discuss  |    481    |    26     |   3617    |    340    |
+ -------------------------------------------------------------
+ | unrelated |    26     |     2     |    163    |   18158   |
+ -------------------------------------------------------------
+ ACCURACY: 0.893
+
+ MAX  - the best possible score (100% accuracy)
+ NULL - score as if all predicted stances were unrelated
+ TEST - score based on the provided predictions
+
+ ||    MAX    ||    NULL   ||    TEST   ||
+ || 11651.25  ||  4587.25  ||  9537.0   ||
+
+
+
+---
+feature:
+
+        feature_list = [
+            # 28
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+model
+29
+
+result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    840    |    31     |    864    |    168    |
+-------------------------------------------------------------
+| disagree  |    215    |    36     |    286    |    160    |
+-------------------------------------------------------------
+|  discuss  |    474    |    34     |   3629    |    327    |
+-------------------------------------------------------------
+| unrelated |    33     |     3     |    155    |   18158   |
+-------------------------------------------------------------
+ACCURACY: 0.892
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9520.5   ||
+
+
+------------------
+features
+
+        feature_list = [
+            # 30
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_wordsim' , 'stanford_negation_3sent', 'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+
+model:
+30
+
+results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    909    |    12     |    866    |    116    |
+-------------------------------------------------------------
+| disagree  |    192    |    67     |    317    |    121    |
+-------------------------------------------------------------
+|  discuss  |    494    |    19     |   3712    |    239    |
+-------------------------------------------------------------
+| unrelated |    16     |     2     |    156    |   18175   |
+-------------------------------------------------------------
+ACCURACY: 0.900
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9706.75  ||
+
+
+------------------
+
+features:
+   feature_list = [
+            # 31
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_wordsim' , 'stanford_negation_3sent', 'stanford_avg_words_per_sent_3sent', 'hedging'],
+             [])
+        ]
+
+model
+31
+
+results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    964    |     8     |    815    |    116    |
+-------------------------------------------------------------
+| disagree  |    229    |    47     |    308    |    113    |
+-------------------------------------------------------------
+|  discuss  |    552    |    18     |   3643    |    251    |
+-------------------------------------------------------------
+| unrelated |    15     |     2     |    137    |   18195   |
+-------------------------------------------------------------
+ACCURACY: 0.899
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9685.25  ||
+
+
+------------------------------------
+features:
+feature_list = [
+            # 32
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_wordsim' , 'stanford_negation_3sent'],
+             [])
+        ]
+
+
+model
+32
+
+
+results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    896    |    15     |    873    |    119    |
+-------------------------------------------------------------
+| disagree  |    198    |    55     |    320    |    124    |
+-------------------------------------------------------------
+|  discuss  |    483    |    24     |   3698    |    259    |
+-------------------------------------------------------------
+| unrelated |    12     |     1     |    138    |   18198   |
+-------------------------------------------------------------
+ACCURACY: 0.899
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9676.75  ||
+
+
+---------
+
+        feature_list = [
+            # 33
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_wordsim'],
+             [])
+        ]
+
+
+model
+33
+
+result
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    896    |    14     |    876    |    117    |
+-------------------------------------------------------------
+| disagree  |    225    |    47     |    313    |    112    |
+-------------------------------------------------------------
+|  discuss  |    496    |    29     |   3684    |    255    |
+-------------------------------------------------------------
+| unrelated |    24     |     0     |    135    |   18190   |
+-------------------------------------------------------------
+ACCURACY: 0.898
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9662.75  ||
+
+-------
+
+
+features:
+        feature_list = [
+            # 34
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_negation_3sent'],
+             [])
+        ]
+
+
+model
+34
+
+result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    889    |    18     |    883    |    113    |
+-------------------------------------------------------------
+| disagree  |    180    |    68     |    329    |    120    |
+-------------------------------------------------------------
+|  discuss  |    477    |    32     |   3704    |    251    |
+-------------------------------------------------------------
+| unrelated |    18     |     1     |    143    |   18187   |
+-------------------------------------------------------------
+ACCURACY: 0.899
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9687.5   ||
+
+
+------------------
+features:
+ feature_list = [
+            # 35
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_wordsim' , 'stanford_negation_3sent'],
+             [])
+        ]
+
+
+model
+35
+
+result
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    912    |     8     |    859    |    124    |
+-------------------------------------------------------------
+| disagree  |    205    |    46     |    318    |    128    |
+-------------------------------------------------------------
+|  discuss  |    522    |    16     |   3665    |    261    |
+-------------------------------------------------------------
+| unrelated |    15     |     1     |    132    |   18201   |
+-------------------------------------------------------------
+ACCURACY: 0.898
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9655.25  ||
+
+
+----------
+
+
+
+features:
+
+
+        feature_list = [
+            # 36
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_wordsim' , 'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+
+model
+36
+
+result
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    910    |    11     |    870    |    112    |
+-------------------------------------------------------------
+| disagree  |    209    |    47     |    326    |    115    |
+-------------------------------------------------------------
+|  discuss  |    498    |    22     |   3692    |    252    |
+-------------------------------------------------------------
+| unrelated |    12     |     1     |    139    |   18197   |
+-------------------------------------------------------------
+ACCURACY: 0.899
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9682.25  ||
+
+
+-------
+feature
+
+        feature_list = [
+            # 37
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_sentiment_3sent', 'stanford_negation_3sent', 'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+
+model
+37
+
+result:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    919    |    14     |    846    |    124    |
+-------------------------------------------------------------
+| disagree  |    200    |    66     |    308    |    123    |
+-------------------------------------------------------------
+|  discuss  |    542    |    27     |   3625    |    270    |
+-------------------------------------------------------------
+| unrelated |    13     |     2     |    131    |   18203   |
+-------------------------------------------------------------
+ACCURACY: 0.898
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9645.0   ||
+
+---------
+
+feature
+        feature_list = [
+            # 38
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_ppdb', 'stanford_wordsim' , 'stanford_negation_3sent', 'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+model
+38
+
+result
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    917    |    15     |    857    |    114    |
+-------------------------------------------------------------
+| disagree  |    199    |    64     |    314    |    120    |
+-------------------------------------------------------------
+|  discuss  |    497    |    40     |   3676    |    251    |
+-------------------------------------------------------------
+| unrelated |    16     |     1     |    135    |   18197   |
+-------------------------------------------------------------
+ACCURACY: 0.899
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9686.75  ||
+
+
+
+--------------------
+
+features
+        feature_list = [
+            # 39
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'stanford_sentiment_3sent', 'stanford_wordsim' , 'stanford_negation_3sent', 'stanford_avg_words_per_sent_3sent'],
+             [])
+        ]
+
+model
+39
+
+results:
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    863    |    15     |    864    |    161    |
+-------------------------------------------------------------
+| disagree  |    196    |    47     |    304    |    150    |
+-------------------------------------------------------------
+|  discuss  |    465    |    20     |   3674    |    305    |
+-------------------------------------------------------------
+| unrelated |    23     |     3     |    175    |   18148   |
+-------------------------------------------------------------
+ACCURACY: 0.895
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9587.0   ||
+
+
+------------------
+
+features
+        feature_list = [
+            # 40
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'sen2sen'],
+             [])
+        ]
+
+
+model
+40
+
+results
+CONFUSION MATRIX:
+-------------------------------------------------------------
+|           |   agree   | disagree  |  discuss  | unrelated |
+-------------------------------------------------------------
+|   agree   |    865    |    27     |    844    |    167    |
+-------------------------------------------------------------
+| disagree  |    211    |    46     |    276    |    164    |
+-------------------------------------------------------------
+|  discuss  |    483    |    34     |   3602    |    345    |
+-------------------------------------------------------------
+| unrelated |    27     |     2     |    147    |   18173   |
+-------------------------------------------------------------
+ACCURACY: 0.893
+
+MAX  - the best possible score (100% accuracy)
+NULL - score as if all predicted stances were unrelated
+TEST - score based on the provided predictions
+
+||    MAX    ||    NULL   ||    TEST   ||
+|| 11651.25  ||  4587.25  ||  9525.0   ||
+
+
+----------
+features:
+        feature_list = [
+            # 41
+            ('voting_mlps_hard',
+             ['overlap', 'refuting', 'polarity', 'hand', 'NMF_fit_all_incl_holdout_and_test',
+              'latent_dirichlet_allocation_incl_holdout_and_test', 'latent_semantic_indexing_gensim_holdout_and_test',
+              'NMF_fit_all_concat_300_and_test', 'word_ngrams_concat_tf5000_l2_w_holdout_and_test',
+              'wmdsenSen', 'wmdsenDoc'],
+             [])
+        ]
+
+model:
+41
+
+results:

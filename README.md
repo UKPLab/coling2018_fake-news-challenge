@@ -18,7 +18,8 @@ Prof. Dr. Iryna Gurevych, AIPHES-Ubiquitous Knowledge Processing (UKP) Lab, TU-D
 It was further developed and enhanced by [Felix Caspelherr](mailto:felixc@shared-files.de) in scope of his master thesis.
 The code was additionaly modified and extended for the submission to the "[27th International Conference on Computational Linguistics (COLING 2018)](https://coling2018.org/)":
 "[A Retrospective Analysis of the Fake News Challenge Stance Detection Task](https://arxiv.org/pdf/1806.05180.pdf)"
-BibTex:
+
+## BibTex:
 @inproceedings{tubiblio105434,
            month = {Juni},
             year = {2018},

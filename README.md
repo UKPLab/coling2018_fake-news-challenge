@@ -20,13 +20,13 @@ The code was additionaly modified and extended for the submission to the "[27th 
 "[A Retrospective Analysis of the Fake News Challenge Stance Detection Task](https://arxiv.org/pdf/1806.05180.pdf)"
 
 ## BibTex:
-@inproceedings{tubiblio105434,
-           month = {Juni},
-            year = {2018},
-       booktitle = {Proceedings of the 27th International Conference on Computational Linguistics (COLING 2018)},
-           title = {A Retrospective Analysis of the Fake News Challenge Stance-Detection Task},
-          author = {Andreas Hanselowski and Avinesh P.V.S. and Benjamin Schiller and Felix Caspelherr and Debanjan Chaudhuri and Christian M. Meyer and Iryna Gurevych},
-             url = {http://tubiblio.ulb.tu-darmstadt.de/105434/}
+* @inproceedings{tubiblio105434,
+*            month = {Juni},
+*             year = {2018},
+*        booktitle = {Proceedings of the 27th International Conference on Computational Linguistics (COLING 2018)},
+*            title = {A Retrospective Analysis of the Fake News Challenge Stance-Detection Task},
+*           author = {Andreas Hanselowski and Avinesh P.V.S. and Benjamin Schiller and Felix Caspelherr and Debanjan * Chaudhuri and Christian M. Meyer and Iryna Gurevych},
+*              url = {http://tubiblio.ulb.tu-darmstadt.de/105434/}
 }
 
 ## Requirements

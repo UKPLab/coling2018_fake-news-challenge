@@ -7,7 +7,7 @@
 
 
 ## Repository of the COLING 2018 paper: [A Retrospective Analysis of the Fake News Challenge Stance Detection Task](https://arxiv.org/pdf/1806.05180.pdf)
-* BibTex:
+* BibTeX:
 	
 		@inproceedings{tubiblio105434,
            		month = {Juni},

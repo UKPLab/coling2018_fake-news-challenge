@@ -9,7 +9,7 @@
 
 ## Introduction
 
-The repository was developed as a part of the Fake News Challenge Stage 1 (FNC-1 http://www.fakenewschallenge.org/) by team Athene:
+The repository was originaly developed as a part of the Fake News Challenge Stage 1 (FNC-1 http://www.fakenewschallenge.org/) by team Athene:
 [Andreas Hanselowski](mailto:hanselowski@aiphes.tu-darmstadt.de), [Avinesh PVS](mailto:avinesh@aiphes.tu-darmstadt.de), [Benjamin Schiller](mailto:schiller.benny@googlemail.com) and [Felix Caspelherr](mailto:felixc@shared-files.de).
 In the project, we worked in close collaboration with [Debanjan Chaudhuri](mailto:deba.kgec@gmail.com). 
 
@@ -19,14 +19,15 @@ It was further developed and enhanced by [Felix Caspelherr](mailto:felixc@shared
 The code was additionaly modified and extended for the submission to the "[27th International Conference on Computational Linguistics (COLING 2018)](https://coling2018.org/)":
 "[A Retrospective Analysis of the Fake News Challenge Stance Detection Task](https://arxiv.org/pdf/1806.05180.pdf)"
 
-## BibTex:
-* @inproceedings{tubiblio105434,
-*            month = {Juni},
-*             year = {2018},
-*        booktitle = {Proceedings of the 27th International Conference on Computational Linguistics (COLING 2018)},
-*            title = {A Retrospective Analysis of the Fake News Challenge Stance-Detection Task},
-*           author = {Andreas Hanselowski and Avinesh P.V.S. and Benjamin Schiller and Felix Caspelherr and Debanjan * Chaudhuri and Christian M. Meyer and Iryna Gurevych},
-*              url = {http://tubiblio.ulb.tu-darmstadt.de/105434/}
+## Publication A Retrospective Analysis of the Fake News Challenge Stance Detection Task]:
+* BibTex:
+		@inproceedings{tubiblio105434,
+           		month = {Juni},
+            		year = {2018},
+       		booktitle = {Proceedings of the 27th International Conference on Computational Linguistics (COLING 2018)},
+           		title = {A Retrospective Analysis of the Fake News Challenge Stance-Detection Task},
+          		author = {Andreas Hanselowski and Avinesh P.V.S. and Benjamin Schiller and Felix Caspelherr and Debanjan * Chaudhuri and Christian M. Meyer and Iryna Gurevych},
+             		url = {http://tubiblio.ulb.tu-darmstadt.de/105434/}
 }
 
 ## Requirements

@@ -6,7 +6,7 @@
 ![tud_weblogo](https://user-images.githubusercontent.com/29311022/27184769-65c6583a-51e3-11e7-90e0-12a4bdf292e2.png)
 
 
-## Repository of the COLING 2018 paper: A Retrospective Analysis of the Fake News Challenge Stance Detection Task:
+## Repository of the COLING 2018 paper: A Retrospective Analysis of the Fake News Challenge Stance Detection Task
 * BibTex:
 	
 		@inproceedings{tubiblio105434,

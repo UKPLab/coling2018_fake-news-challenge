@@ -23,7 +23,7 @@ markupsafe==1.0
 matplotlib==2.0.0
 munkres==1.0.12
 networkx==1.11
-nltk==3.2.2
+nltk==3.4.5
 pandas==0.19.2
 pexpect==4.2.1
 ptyprocess==0.5.2

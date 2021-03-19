@@ -16,7 +16,7 @@ idna==2.5
 imagesize==0.7.1
 imbalanced-learn==0.2.1
 imblearn==0.0
-jinja2==2.9.6
+jinja2==2.11.3
 keras==2.0.6
 markdown==2.6.8
 markupsafe==1.0

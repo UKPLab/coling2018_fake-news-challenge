@@ -32,7 +32,7 @@ pygments==2.2.0
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.2
-pyyaml==3.12
+pyyaml==5.4
 regex==2016.12.27
 retinasdk==1.0.0
 scikit-learn==0.18.1

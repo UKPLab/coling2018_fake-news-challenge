@@ -28,7 +28,7 @@ pandas==0.19.2
 pexpect==4.2.1
 ptyprocess==0.5.2
 pycorenlp==0.3.0
-pygments==2.2.0
+pygments==2.7.4
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.2

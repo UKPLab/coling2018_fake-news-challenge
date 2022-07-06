@@ -11,7 +11,7 @@ docutils==0.14
 future==0.16.0
 gensim==0.13.4.1
 h5py==2.7.1
-html5lib==0.9999999
+html5lib==0.999999999
 idna==2.5
 imagesize==0.7.1
 imbalanced-learn==0.2.1
